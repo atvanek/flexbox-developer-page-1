@@ -10,7 +10,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -97,24 +97,29 @@ textarea {
 
 /*Large Background Image*/
 html {
-  background: url(../img/pink-lines.png);
-  background-repeat: no-repeat;
-  background-position-y: top;
-  background-position-x: center;
-  background-size: 100% auto;
+  
   height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
    /* set height to 100% - these are important for allowing content to vertically align */
 }
 
 body {
     /* set height to 100% - these are important for allowing content to vertically align */
     height: 100%;
+    max-height: 400px;
+    background: url(../img/pink-lines.png);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+
 }
 
 
 .wrapper {
   /* set the display to flex and use the justify-content & align-items properties to center all child elements on the page */
-  margin: 5%;
+  margin: 0;
   height: 100%;
   width: 100%;
   display: flex;
@@ -133,7 +138,6 @@ body {
   border-radius: 10px;
   padding: 5%;
   width: 300px;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,6 +247,18 @@ body {
     /* Style adjustments for viewports that meet the condition */
 }
 
+@media screen (min-width: 768px){
+  body{
+    background-size: ;
+  }
+}
+
+@media screen (min width: 1200px){
+    .content{
+        height: 300px;
+        background-size: 100%;
+    }
+}
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
